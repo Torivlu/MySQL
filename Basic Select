@@ -1,0 +1,31 @@
+Create Table customers (
+id int Primary Key not null,
+name varchar (40) not null,
+street varchar (40) not null,
+city varchar (40) not null,
+state char (2) not null,
+credit_limit float not null
+);
+
+Insert Into customers (id, name, street, city, state, credit_limit)
+Values
+(1, 'Pedro Augusto da Rocha', 'Rua Pedro Carlos Hoffman', 'Porto Alegre', 'RS', 700.00),
+(2, 'Antonio Carlos Mamel', 'Av. Pinheiros', 'Belo Horizonte', 'MG', 3500.50),
+(3, 'Luiza Augusta Mhor', 'Rua Salto Grande', 'Niteroi', 'RJ', 4000.00),
+(4, 'Jane Ester', 'Av. 7 de setembro', 'Erechim', 'RS', 800.00),
+(5, 'Marcos Antônio dos Santos', 'Av Farrapos', 'Porto Alegre', 'RS', 4250.25);
+
+select * From customers;
+select *
+from customers
+where state = 'RS';
+
+/*
+
+Select * = Indica que queremos todos os campos.
+FROM customers = Indica que os dados vêm da tabela customers.
+WHERE state 'RS'; = Cláusula que filtra os resultados, retornando
+apenas as linhas onde a coluna state é igual a 'RS'.
+
+Esse comando retornará todas as colunas, mas somente das linhas
+em que o estado do cliente é 'RS'. */
