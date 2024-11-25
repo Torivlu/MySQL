@@ -1,0 +1,18 @@
+Create Table Products(
+Id int Primary key not null,
+name varchar(40) Not null,
+amount int not null,
+price numeric(10,2) not null
+);
+
+INSERT INTO Products (id, name, amount, price)
+VALUES
+(1, 'Two-door wardrobe', 100, 80.00),
+(2, 'Dining table', 1000, 560.00),
+(3, 'Towel holder', 10000, 5.50),
+(4, 'Computer desk', 350, 100.00),
+(5, 'chair', 3000, 210.64),
+(6, 'Single bed', 750, 99.00);
+
+SELECT * FROM Products; /* exibe a tabela */
+SELECT * FROM Products WHERE price BETWEEN 10 AND 100;
